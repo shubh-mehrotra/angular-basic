@@ -6,19 +6,17 @@ import { CustomerProfileComponent } from './customer-profile/customer-profile.co
 
 const routes: Routes = [
   {
-    path: 'customer',
+    path: '',
     component: CustomerDashboardComponent,
-    children: [
-      {
-        path: 'profile',
-        component: CustomerProfileComponent,
-      },
-    ],
+  },
+  {
+    path: 'profile',
+    component: CustomerProfileComponent,
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class CustomerDashboardRoutingModule { }
